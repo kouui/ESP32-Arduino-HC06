@@ -28,7 +28,7 @@ ESP-WROOM-32 和 Arduino+HC-06 之间的蓝牙匹配连接与通信。
 
 1. 电脑USB连接ESP32，打开ArduinoIDE(会需要下载ESP32用的USB驱动和ArduinoIDE里头的board驱动)，打开ArduinoIDE的串口监视器(Serial Monitor)
 2. ArduinoIDE里的ESP32驱动选择版本1.0.4，将ESP32.ino烧录进ESP32，串口监视器显示"connected"，但是HC-06仍然处于红色LED闪烁状态，也就是实际没有匹配上
-3. 将ArduinoIDE里的ESP32驱动选择版本替换成1.0.2，重新将ESP32.ino烧录进ESP32，串口监视器显示"connected"并且能连续接收到"This is a message"的数据，HC-06的红色LED变为常亮
+3. 将ArduinoIDE里的ESP32驱动选择版本替换成1.0.2，将`1.0.2/libraries/BluetoothSerial/src/BluetoothSerial.*`替换成这个repository里头的`src/BluetoothSerial.*`后，重新将ESP32.ino烧录进ESP32，串口监视器显示"connected"并且能连续接收到"This is a message"的数据，HC-06的红色LED变为常亮
 
 
 ## 注意
